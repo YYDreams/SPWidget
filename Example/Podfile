@@ -1,0 +1,6 @@
+use_frameworks!
+target 'SPWidget_Tests' do
+  pod 'SPWidget', :path => '../'
+  
+  
+end
