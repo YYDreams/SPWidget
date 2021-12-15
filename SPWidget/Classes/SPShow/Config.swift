@@ -35,8 +35,16 @@ public class ShowAlertConfig {
     public var maskType: MaskType = .color
     
     
+    ///alert主体颜色 默认
+    public var tintColor : UIColor = UIColor.white
+    
     /// 弹出视图样式位置
     public var showAnimateType : PopViewShowType? = .center
+    
+    ///alert背景颜色
+    public var bgColor : UIColor = UIColor.black.withAlphaComponent(0.5)
+
+    
     
     
     // ------------------------- 字体颜色
@@ -70,6 +78,10 @@ public class ShowAlertConfig {
     public var rightBtnBorderColor : UIColor = UIColor.white
     
     
+    // 当line颜色高度大于0才会显示
+    public var lineHeight: CGFloat = 0
+    // 按钮上面的线条颜色
+    public var lineColor: UIColor = UIColor.black.withAlphaComponent(0.5)
     
     //  ------------------------- 常量
     
@@ -90,6 +102,9 @@ public class ShowAlertConfig {
     
     ///message距离title之前的间距的距离
     public var messageTopSpacing : CGFloat = 0
+    
+    ///alert按钮字体
+    public var buttonFont : UIFont = UIFont.systemFont(ofSize: 15)
     
     ///alert按钮高度
     public var buttonHeight : CGFloat = 40
@@ -113,6 +128,12 @@ public class ShowAlertConfig {
     
     ///动画是否弹性
     public var animateDamping = false
+    
+    ///阴影
+    public var shadowColor : CGColor = UIColor.clear.cgColor
+    public var shadowOpacity : Float = 0.5
+    public var shadowRadius : CGFloat = 8
+    
        
 }
 
@@ -124,6 +145,10 @@ open class  ShowPopViewConfig {
     
     /// 点击其他地方是否消失 默认true
     public var clickOtherHidden = true
+    
+    ///alert宽度
+    public var width : CGFloat = UIScreen.main.bounds.size.width - 88.0
+
     
     /// 默认蒙版类型
     public var maskType: MaskType = .color
